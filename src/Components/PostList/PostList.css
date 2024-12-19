@@ -1,0 +1,22 @@
+.post-list{
+    width: 900px;
+    padding: 10px;
+    margin: 0 auto;
+  }
+.post-list-header{
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid wheat;
+}
+.post-list-main{
+    height: 1500px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid wheat;
+}

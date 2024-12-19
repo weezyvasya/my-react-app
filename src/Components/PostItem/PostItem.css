@@ -1,0 +1,21 @@
+.post-item{
+    width: 400px;
+    height: 400px;
+    border: 3px solid wheat;
+}
+.post-item-top{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid wheat;
+}
+.post-item-bottom{
+    width: 100%;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid wheat;
+}

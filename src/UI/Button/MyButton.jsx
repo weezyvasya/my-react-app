@@ -1,9 +1,10 @@
 import './MyButton.css'
 
-function MyButton({children}) {
+function MyButton({children,  ...props}) {
     return ( 
-        <button className="my-button">{children}</button>
+        <button {...props} className="my-button">{children}</button>
      );
 }
 
 export default MyButton;
+

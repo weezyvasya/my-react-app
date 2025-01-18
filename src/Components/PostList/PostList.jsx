@@ -1,6 +1,8 @@
 import PostItem from '../PostItem/PostItem';
 import './PostList.css'
-function PostList(data) {
+
+
+function PostList({data, remove}) {
     return ( 
         <>
           <div className="post-list">
@@ -8,7 +10,7 @@ function PostList(data) {
                     <h1>Посты</h1>
                 </div>
                 <div className="post-list-main">
-                    <PostItem/>
+                   {data.map((post) =>  <PostItem key={post.id} post={post} remove={remove}/>)}
                 </div>
           </div>
         </>

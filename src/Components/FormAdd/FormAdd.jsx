@@ -1,11 +1,19 @@
-import MyButton from "../../UI/Button/MyButton";
+import {MyButton} from "../../UI/Button/MyButton";
 import MyInput from "../../UI/MyInput/MyInput";
 import './FormAdd.css'
-import { useState } from "react";
+import { useState, useContext} from "react";
+import { ThemeContext } from "../../Context/ThemeContext";
 
 
 
-function FormAdd({ create, close }) {
+function FormAdd({ create, close}) {
+
+  const {theme, toggleTheme} = useContext(ThemeContext)
+
+  console.log(theme)
+
+  
+
   const [title, setTitle] = useState('')
   const [subtitle, setSubtitle] = useState('')
 

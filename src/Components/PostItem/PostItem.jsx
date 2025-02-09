@@ -1,4 +1,4 @@
-import MyButton from '../../UI/Button/MyButton';
+import { MyButton } from '../../UI/Button/MyButton';
 import './PostItem.css'
 
 function PostItem({post, remove}) {
@@ -9,7 +9,7 @@ function PostItem({post, remove}) {
                 <h3>{post.title}</h3>
             </div>
             <div className="post-item-bottom">
-                <p>{post.subtitle}</p>
+                <p className='post-item-bottom-text'>{post.subtitle}</p>
                 <MyButton onClick={()=> remove(post.id)}>Удалить</MyButton>
             </div>
           </div>

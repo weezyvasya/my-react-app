@@ -9,7 +9,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 2px solid wheat;
+    margin-bottom: 30px;
+    /* border: 2px solid wheat; */
 }
 .post-list-main{
     height: 100%;
@@ -19,5 +20,5 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 2px solid wheat;
+    /* border: 2px solid wheat; */
 }

@@ -1,8 +1,12 @@
 import PostItem from '../PostItem/PostItem';
 import './PostList.css'
+import { useTasks } from '../../Context/TasksContext';
 
 
-function PostList({data, remove}) {
+function PostList() {
+  const {tasks, searchText} = useTasks()
+
+
     return ( 
         <>
           <div className="post-list">
@@ -10,7 +14,9 @@ function PostList({data, remove}) {
                     <h1>Посты</h1>
                 </div>
                 <div className="post-list-main">
-                   {data.map((post) =>  <PostItem key={post.id} post={post} remove={remove}/>)}
+                   {tasks
+                     .filter((task) =>  task.title.toLocaleUpperCase().includes(searchText.toLocaleUpperCase()))
+                     .map((post) =>  <PostItem key={post.id} post={post}/>)}
                 </div>
           </div>
         </>

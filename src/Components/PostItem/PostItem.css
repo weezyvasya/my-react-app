@@ -1,12 +1,20 @@
 .post-item{
     width: 400px;
-    height: 400px;
-    border: 3px solid rgb(23, 16, 42);
+    min-height: 400px;
+    border: 3px solid  #1a1a1a;
     margin: 20px;
     border-radius: 15%;
+    background-color: #c0aaaa10;
+    transition: 1s;
+}
+html[data-theme='light'] .post-item{
+    background-color: rgba(192, 170, 170, 1);
+}
+.post-item:hover{
+    transform: scale(1.1);
 }
 .post-item-top{
-    width: 100%;
+    width: 100%;    
     height: 50px;
     display: flex;
     justify-content: center;
@@ -15,9 +23,10 @@
 }
 .post-item-bottom{
     width: 100%;
-    height: 350px;
+    min-height: 350px;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-around;
     align-items: center;
     /* border: 1px solid wheat; */
 }
@@ -26,7 +35,8 @@
     word-break: break-all;
     width: 200px;
     padding: 20px;
-    border: 2px solid rgb(23, 16, 42);
+    /* border: 2px solid rgb(23, 16, 42); */
+    /* background-color:   #4322226b ; */
     margin-right: 10px;
 
 }

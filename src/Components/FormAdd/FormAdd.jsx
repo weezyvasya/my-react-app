@@ -1,32 +1,30 @@
-import {MyButton} from "../../UI/Button/MyButton";
+import { MyButton } from "../../UI/Button/MyButton";
 import MyInput from "../../UI/MyInput/MyInput";
 import './FormAdd.css'
 import { useState, useContext} from "react";
 import { ThemeContext } from "../../Context/ThemeContext";
+import { useTasksDispatch } from "../../Context/TasksContext";
 
 
 
-function FormAdd({ create, close}) {
+function FormAdd({ close }) {
 
   const {theme, toggleTheme} = useContext(ThemeContext)
-
-  console.log(theme)
-
-  
-
   const [title, setTitle] = useState('')
   const [subtitle, setSubtitle] = useState('')
+
+  const dispatch = useTasksDispatch()
 
   function addPost(){
     if (title === '' || subtitle === ''){
       return 
     }
-    const newPost = {
+    dispatch({
+      type: 'create',
       id: Math.random(),
       title,
       subtitle
-    }
-    create(newPost)
+    }) 
     setTitle('')
     setSubtitle('')
     close()

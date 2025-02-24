@@ -1,11 +1,9 @@
 import './MyModal.css'
+import { useState } from 'react';
 
 function MyModal ({children, show, close}) {
-    
-    // const rootClass = ['overlay']
-    // if (show) {
-    //    rootClass.push('overlay_active')
-    // }
+  
+
 
 
     return ( 

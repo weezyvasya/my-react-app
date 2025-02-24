@@ -1,7 +1,9 @@
 import { MyButton } from '../../UI/Button/MyButton';
 import './PostItem.css'
+import { useTasksDispatch } from '../../Context/TasksContext';
 
-function PostItem({post, remove}) {
+function PostItem({post}) {
+  const dispatch = useTasksDispatch()
     return ( 
         <>
           <div className="post-item">
@@ -10,7 +12,7 @@ function PostItem({post, remove}) {
             </div>
             <div className="post-item-bottom">
                 <p className='post-item-bottom-text'>{post.subtitle}</p>
-                <MyButton onClick={()=> remove(post.id)}>Удалить</MyButton>
+                <MyButton onClick={()=> dispatch({type: 'delete', id: post.id})}>Удалить</MyButton>
             </div>
           </div>
         </>
